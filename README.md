@@ -21,7 +21,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|references|index:true,null: false, foreign_key: true|
+|name|string|index:true,null: false|
 |email|string|null: false, unique: true|
 |pass|string|null:false|
 
@@ -35,6 +35,8 @@
 |------|----|-------|
 |text|text|-------|
 |image|text|-------|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
